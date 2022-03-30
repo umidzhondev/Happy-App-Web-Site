@@ -17,7 +17,8 @@ body {
     overflow-x: hidden !important;
     font-family: "Poppins",sans-serif;
     position: relative;
-    color: $black-color
+    color: $black-color;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul {

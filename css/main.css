@@ -114,6 +114,7 @@ body {
   font-family: "Poppins",sans-serif;
   position: relative;
   color: #222222;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
