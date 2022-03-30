@@ -1,0 +1,64 @@
+body {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 54px;
+    line-height: 60px;
+    font-weight: 400;
+
+    @include responsive(sm) {
+        font-size: 44px;
+        line-height: 140%;
+    }
+
+    @include responsive(xs) {
+        font-size: 35px;
+    }
+
+    @include responsive(xxs) {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+
+    @include responsive(sm) {
+        font-size: 28px;
+    }
+
+    @include responsive(xs) {
+        font-size: 24px;
+    }
+
+    @include responsive(xxs) {
+        font-size: 22px;
+    }
+
+    @include responsive(ss) {
+        font-size: 20px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+
+    @include responsive(xxs) {
+        font-size: 22px;
+    }
+}
+
+span,
+p,
+a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}

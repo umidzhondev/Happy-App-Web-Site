@@ -1,0 +1,540 @@
+// * Home Section
+.home {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px;
+
+    @include responsive(md) {
+        padding-top: 150px;
+    }
+
+    @include responsive(xxs) {
+        padding-top: 130px;
+    }
+
+    &__content {
+        width: 90%;
+        padding-bottom: 150px;
+        @include flex(space-between, flex-start, row);
+        position: relative;
+        margin: 0 auto;
+
+        @include responsive(lg) {
+            padding-bottom: 100px;
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(sm) {
+            align-items: flex-end;
+        }
+
+        @include responsive(xs) {
+            flex-direction: column;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__info {
+        padding-top: 45px;
+        @include flex(space-between, flex-start, column);
+        width: 40%;
+
+        @include responsive(lg) {
+            width: 48%;
+        }
+
+        @include responsive(md) {
+            padding-top: 0;
+        }
+
+        @include responsive(sm) {
+            margin-right: 20px;
+            width: 65%;
+        }
+
+        @include responsive(xs) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+
+        img {
+            @extend .image;
+        }
+
+        @include responsive(xs) {
+            width: 130px;
+        }
+
+        @include responsive(xxs) {
+            width: 120px;
+        }
+    }
+
+    &__title {
+        color: $black-color;
+        margin-bottom: 18px;
+
+        @include responsive(sm) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 20px;
+
+        @include responsive(xs) {
+            width: 80%;
+        }
+
+        @include responsive(xxs) {
+            width: 100%;
+        }
+    }
+
+    &__buttons {
+        @include flex(flex-start, cover, row);
+        gap: 10px;
+
+        @include responsive(ss) {
+            flex-wrap: wrap;
+            width: 100%;
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    &__imgbox {
+        position: absolute;
+        right: 0;
+        height: 520px;
+        overflow: hidden;
+        bottom: 0;
+
+        @include responsive(md) {
+            height: 460px;
+            width: 50%;
+        }
+
+        @include responsive(sm) {
+            position: relative;
+            height: 250px;
+            width: 35%;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @include responsive(xs) {
+            display: none;
+        }
+    }
+}
+
+// * Features Section
+.features {
+    padding: 100px 0;
+    background-color: $black-color;
+
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 60px 0;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        color: #fff;
+    }
+}
+
+// * Statistic Section
+.statistic {
+    background-color: $orange-color;
+    padding: 80px 0 100px 0;
+
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 60px 0;
+    }
+
+    @include responsive(xxs) {
+        padding: 50px 0;
+    }
+
+    &__items {
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(xs) {
+            flex-wrap: wrap;
+            gap: 25px 0;
+        }
+
+        @include responsive(xxs) {
+            gap: 35px 0;
+            flex-direction: column
+        }
+    }
+
+    &__item {
+        @include flex(center, center, column);
+        flex: 1;
+        color: #fff;
+
+        @include responsive(xs) {
+            &:nth-child(2) {
+                order: 9;
+            }
+        }
+
+        h1 {
+            font-size: 96px;
+            line-height: 96px;
+            font-weight: 400;
+            margin-bottom: 20px;
+
+            @include responsive(md) {
+                font-size: 75px;
+                line-height: 85px;
+            }
+
+            @include responsive(sm) {
+                font-size: 60px;
+                line-height: 65px;
+                margin-bottom: 15px;
+            }
+
+            @include responsive(xs) {
+                font-size: 55px;
+                margin-bottom: 10px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 45px;
+                margin-bottom: 10px;
+            }
+        }
+
+        span {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+
+}
+
+// * About Section
+.about {
+    &__content {
+        width: 85%;
+        margin: 0 auto;
+        @include flex(center, center, column);
+
+        @include responsive(md) {
+            width: 100%;
+        }
+    }
+
+    &__top {
+        background-color: #fff;
+    }
+
+    &__bottom {
+        background-color: $white-color;
+    }
+
+    &__box {
+        width: 100%;
+        padding-top: 100px;
+        @include flex(space-between, flex-start, row);
+
+        @include responsive(sm) {
+            padding-top: 0;
+            align-items: flex-end;
+        }
+
+        @include responsive(xs) {
+            flex-direction: column;
+        }
+    }
+
+    &--box--2 {
+        @include responsive(xs) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &--info--1 {
+        margin-right: 20px;
+    }
+
+    &--info--2 {
+        margin-left: 20px;
+    }
+
+    &__info {
+        @include flex(flex-start, flex-start, column);
+        width: 40%;
+        padding-top: 70px;
+
+        @include responsive(sm) {
+            width: 80%;
+            padding-bottom: 40px;
+        }
+
+        @include responsive(xs) {
+            margin: 0;
+            width: 100%;
+
+        }
+    }
+
+    &__suptitle {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        color: $gray-color;
+    }
+
+    &__imgbox {
+        height: 500px;
+        overflow: hidden;
+
+        @include responsive(sm) {
+            height: 320px;
+        }
+
+        @include responsive(xs) {
+            height: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// * Mode Section
+.mode {
+    background-color: $black-color;
+    color: #fff;
+    padding: 100px 0 160px 0;
+
+    @include responsive(md) {
+        padding: 100px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 70px 0;
+    }
+
+    @include responsive(xxs) {
+        padding: 50px 0;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__main {
+        @include flex(center, center, column);
+        width: 100%;
+    }
+
+    &__imgbox {
+        overflow: hidden;
+        height: 490px;
+
+        @include responsive(md) {
+            height: 420px;
+        }
+
+        @include responsive(xxs) {
+            height: 320px;
+        }
+    }
+
+    &__line {
+        width: 600px;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 40px;
+    }
+
+    &__themes {
+        @include flex(center, center, row);
+        gap: 40px;
+    }
+
+    &__theme {
+        @include flex(center, center, column);
+    }
+
+}
+
+// * Pricing Section
+.pricing {
+    padding: 100px 0;
+
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 60px 0;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        color: $black-color;
+
+        p {
+            color: $gray-color;
+        }
+    }
+}
+
+// * Review Section
+.review,
+.download {
+    padding: 100px 0;
+    background-color: $white-color;
+
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 60px 0;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        color: $black-color;
+
+        p {
+            color: $gray-color;
+        }
+    }
+}
+
+// * Download Section
+.download {
+    background-color: #fff;
+
+    &__imgbox {
+        margin: 0 auto;
+        text-align: center;
+
+        @include responsive(xs) {
+            width: 160px;
+        }
+
+        @include responsive(xxs) {
+            width: 140px;
+        }
+    }
+}
+
+// * Help Section
+.help {
+    background-color: $white-color-2;
+    padding: 100px 0;
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 60px 0;
+    }
+    &__content {
+        @include flex(center, flex-start, column);
+    }
+    &__header{
+       @include flex(center, flex-start, column);
+       margin-bottom: 40px;
+    }
+    &__title {
+        margin-bottom: 13px;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &__items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 26px 16px;
+        @include responsive(lg){
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        }
+        @include responsive(md){
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+        }
+        @include responsive(xs){
+            grid-gap: 20px 0;
+        grid-template-columns: repeat(1, 1fr);
+
+        }
+    }
+
+    &__item {
+        @include flex(flex-start, flex-start, column);
+
+        &-title {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        &-description {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

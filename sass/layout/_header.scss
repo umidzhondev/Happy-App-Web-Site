@@ -1,0 +1,120 @@
+.header {
+    background-color: #fff;
+    box-shadow: $gray-box-shadow;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    .navbar {
+        @include flex(space-between, center, row);
+        width: 100%;
+        padding: 25px 0;
+
+        @include responsive(xs) {
+            padding: 14px 0;
+        }
+
+        &__logo {
+            img {
+                @extend .image;
+            }
+        }
+
+        &__main {
+            @include flex(space-between, center, row);
+
+            @include responsive(sm) {
+                padding: 0 20px;
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                z-index: 99;
+                background-color: #ffffffe0;
+                ;
+                left: 100%;
+                top: 0;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding-top: 50px;
+                transition: left .8s ease;
+            }
+
+            &.open {
+                left: 0;
+            }
+        }
+
+        &--close--icon {
+            font-size: 32px;
+            display: none !important;
+
+            @include responsive(sm) {
+                display: block !important;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                font-size: 28px;
+                color: #fff;
+                padding: 12px 20px;
+                background-color: $blue-color;
+                border-radius: 10px;
+            }
+
+            @include responsive(xs) {
+                font-size: 24px;
+                top: 45px;
+                left: 45px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 22px;
+                top: 40px;
+                left: 40px;
+                padding: 10px 18px;
+            }
+        }
+
+        &--open--icon {
+            font-size: 32px;
+            display: none !important;
+            color: $black-color;
+
+            @include responsive(sm) {
+                display: block !important;
+            }
+
+            @include responsive(xs) {
+                font-size: 28px;
+            }
+
+            @include responsive(xxs) {
+                padding: 10px;
+            }
+        }
+
+        &__button {
+            margin-left: 26px;
+
+            @media(max-width:800px) {
+                margin-left: 10px;
+            }
+
+            @include responsive(sm) {
+                width: 80%;
+                padding: 16px 20px;
+                font-size: 18px;
+                background-color: $blue-color;
+            }
+
+            @include responsive(xs) {
+                width: 90%;
+                font-size: 16px;
+                padding: 14px 20px;
+            }
+
+            @include responsive(ss) {
+                width: 95%;
+            }
+        }
+    }
+}
